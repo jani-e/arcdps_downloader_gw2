@@ -12,6 +12,10 @@ package com.gw2.arcdpsdownloadergw2;
 public class ArcdpsDownloaderGW2 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        UI ui = new UI();
+        System.out.println("Starting");
+        ui.start();
+        System.out.println("Closing");
     }
+    
 }
