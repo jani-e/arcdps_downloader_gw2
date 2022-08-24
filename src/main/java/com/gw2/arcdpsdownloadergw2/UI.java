@@ -13,32 +13,31 @@ import java.util.Scanner;
 public class UI {
 
     private Scanner scanner;
+    private FileHandler fileHandler;
 
     public UI() {
         this.scanner = new Scanner(System.in);
+        this.fileHandler = new FileHandler();
     }
 
     public void start() {
         while (true) {
             System.out.println("\n--------\nOptions\n--------");
             System.out.println("1 - Download latest Arcdps");
+            System.out.println("2 - Remove Arcdps");
             System.out.println("0 - Close program");
+            System.out.print("\nOption: ");
             int input = Integer.parseInt(this.scanner.nextLine());
-            if (input == 0) {
-                break;
+            switch (input) {
+                case 1:
+                    this.fileHandler.download();
+                    break;
+                case 2:
+                    this.fileHandler.removeFile();
+                    break;
+                default:
+                    return;
             }
-            if (input == 1) {
-                download();
-            }
-        }
-    }
-
-    public void download() {
-        Downloader dl = new Downloader();
-        if (dl.downloadFile()) {
-            System.out.println("Download successful");
-        } else {
-            System.out.println("Error in downloading");
         }
     }
 }
