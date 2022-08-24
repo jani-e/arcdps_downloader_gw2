@@ -5,6 +5,7 @@
 package com.gw2.arcdpsdownloadergw2;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -26,7 +27,7 @@ public class Downloader {
 
     public Downloader() {
         try {
-            this.url = new URL("https://www.deltaconnected.com/arcdps/x64/d3d9.dll");
+            this.url = new URL("https://www.deltaconnected.com/arcdps/x64/d3d11.dll");
             this.filePath = "C:/Program Files/Guild Wars 2/d3d11.dll";
         } catch (MalformedURLException ex) {
             Logger.getLogger(Downloader.class.getName()).log(Level.SEVERE, null, ex);
