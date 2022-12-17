@@ -4,8 +4,6 @@
  */
 package com.gw2.arcdpsdownloadergw2;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
